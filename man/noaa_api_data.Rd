@@ -22,3 +22,9 @@ documentation for other options)}
 \description{
 Get data from NOAA weather API for Ames, IA
 }
+\examples{
+\dontrun{
+  # Get Ames minimum and maximum temperature for 2017
+  noaa_api_data(date_min = "2017-01-01", date_max = "2017-12-31")
+}
+}
