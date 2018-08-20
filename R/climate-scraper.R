@@ -43,6 +43,7 @@ scrape_scripps_stations <- function(baseURL = "http://scrippsco2.ucsd.edu/data/a
       Longitude = replace(Longitude, is.na(Longitude), 0)
     ) %>%
     select(- starts_with("dir")) %>%
+    rename(Elevation = `Elevation (m)`) %>%
     mutate(
       Accessed = lubridate::today()
     )
